@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReWaste - Beranda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="rw-navbar">
+    <div class="rw-nav-toggle">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="rw-nav-container">
+        <div class="rw-logo">
+            <img src="assets/img/logo.png" alt="Logo ReWaste">
+            <span>ewaste</span>
+        </div>
+
+        <nav class="rw-nav-menu" id="rwNavMenu">
+            <a href="beranda.html">Beranda</a>
+            <a href="edukasi.html">Edukasi</a>
+            <a href="bank.html" class="active">Bank Sampah</a>
+            <a href="galeri.html">Galeri</a>
+            <a href="kontak.html">Kontak</a>
+            <a href="login.html"><button class="rw-login-btn">Login</button></a>
+        </nav>
+
+        <div class="rw-nav-toggle" id="rwNavToggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+</header>
+
+<!-- ===================== HERO BANK STEP ===================== -->
+<section class="bank-hero">
+    <div class="bank-hero-overlay"></div>
+
+    <div class="bank-hero-content">
+        <h1>Ayo, Tukarkan Sampahmu!</h1>
+        <p>Jadikan Lingkungan Lebih Bersih dengan Cara Upload Fotonya, Masukkan Berat, 
+        Langsung Dapat Koin yang Bisa Ditukar ke Saldo E-Wallet. Praktis, Cepat, Aman.</p>
+    </div>
+</section>
+
+<!-- ===================== JENIS SAMPAH BOX ===================== -->
+<section class="jenis-sampah-wrapper">
+    <div class="jenis-sampah-box">
+        <h3 class="jenis-title">Pilih Jenis Sampah</h3>
+
+        <div class="jenis-option">
+            <button class="btn-jenis">Organik</button>
+            <button class="btn-jenis">Anorganik</button>
+            <button class="btn-jenis">B3</button>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== FORM TUKARKAN SAMPAH SESUAI GAMBAR ===================== -->
+<section class="tukar-section">
+
+    <h2 class="tukar-title">Tukarkan Sampahmu</h2>
+
+    <!-- ========== STEP INDICATOR BARU ========== -->
+    <div class="steps-container">
+
+        <div class="step-item active">
+            <div class="step-icon">
+                <div class="step-number">1</div>
+                <div class="step-box"></div>
+            </div>
+    
+            <div class="step-right">
+                <div class="step-line"></div>
+                <p class="step-text">Detail Penukaran</p>
+            </div>
+        </div>
+    
+        <div class="step-item inactive">
+            <div class="step-icon">
+                <div class="step-number">2</div>
+                <div class="step-box"></div>
+            </div>
+    
+            <div class="step-right">
+                <div class="step-line"></div>
+                <p class="step-text">Lokasi Penukaran</p>
+            </div>
+        </div>
+
+        <div class="step-item inactive">
+            <div class="step-icon">
+                <div class="step-number">3</div>
+                <div class="step-box"></div>
+            </div>
+    
+            <div class="step-right">
+                <div class="step-line"></div>
+                <p class="step-text">Konfirmasi Penukaran</p>
+            </div>
+        </div>
+    
+    </div>
+    
+    <!-- ========== FORM BOX ========== -->
+    <div class="tukar-form">
+
+        <!-- LEFT: PREVIEW AREA -->
+        <div class="preview-column">
+            <div id="mainPreview" class="upload-preview-big"></div>
+
+            <!-- THUMBNAILS -->
+            <div class="thumb-row" id="thumbContainer"></div>
+        </div>
+
+        <!-- RIGHT: INPUT FORM -->
+        <div class="input-column">
+
+            <label>Berat Sampah</label>
+            <input type="text" placeholder="Example: 10 ">
+
+            <label>Tanggal Penukaran</label>
+            <input type="date">
+
+            <label>Upload Gambar</label>
+            <input type="file" id="fileInput" multiple>
+
+            <label>Koin yang Didapat</label>
+            <input type="text" value="10 Koin">
+
+            <!-- BUTTONS RATA KIRI–KANAN -->
+            <div class="btn-row">
+                <button class="btn-simpan">Simpan</button>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- ===================== FLOATING CHATBOT BUTTON ===================== -->
+<div class="rw-chatbot-btn" id="chatbotBtn">
+    <i class="fa-solid fa-comments"></i>
+</div>
+
+<div class="rw-chatbot-popup" id="chatbotPopup">
+    <div class="rw-chatbot-header">
+        <span>Rewaste Chatbot</span>
+        <i class="fa-solid fa-xmark" id="chatbotClose"></i>
+    </div>
+
+    <div class="rw-chatbot-body" id="chatbotBody">
+        <div class="bot-msg">
+            Halo! Ada yang bisa saya bantu? 😊
+        </div>
+    </div>
+
+    <div class="rw-chatbot-input">
+        <input type="text" id="chatbotInput" placeholder="Ketik pesan...">
+        <button id="chatbotSend"><i class="fa-solid fa-paper-plane"></i></button>
+    </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="rw-footer">
+    <div class="rw-footer-container">
+
+        <!-- LEFT: Logo + Description -->
+        <div class="rw-footer-brand">
+            <div class="rw-footer-logo">
+                <img src="assets/img/logo.png" alt="Logo">
+                <span>ewaste</span>
+            </div>
+            <p>
+                Platform edukasi sampah dan bank sampah digital untuk membantu siapa saja belajar, beraksi, dan memberi dampak nyata bagi lingkungan.
+            </p>
+
+            <div class="rw-footer-socials">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <!-- MIDDLE: Navigation -->
+        <div class="rw-footer-links">
+            <h4>Navigasi</h4>
+            <a href="#">Beranda</a>
+            <a href="#">Edukasi</a>
+            <a href="#">Bank Sampah</a>
+            <a href="#">Galeri</a>
+            <a href="#">Kontak</a>
+        </div>
+
+        <!-- RIGHT: Help -->
+        <div class="rw-footer-links">
+            <h4>Bantuan</h4>
+            <a href="#">Cara Kerja</a>
+            <a href="#">FAQ</a>
+            <a href="#">Pusat Bantuan</a>
+            <a href="#">Hubungi Kami</a>
+        </div>
+
+        <!-- RIGHT MOST – Newsletter -->
+        <div class="rw-footer-news">
+            <h4>Dapatkan Informasi</h4>
+
+            <div class="rw-footer-input-box">
+                <input type="text" placeholder="Email Anda...">
+                <button><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <br><hr class="hr">
+
+    <div class="rw-footer-bottom">
+        <p>Copyright © 2025 <span>Rewaste.</span> All rights reserved.</p>
+    </div>
+    
+    <div class="rw-footer-corner top-right"></div>
+    <div class="rw-footer-corner bottom-left"></div>
+    <div class="rw-footer-half-circle top-center"></div>
+</footer>
+
+<!-- ========== POPUP SUCCESS ========== -->
+<div class="popup-success" id="popupSuccess">
+    <div class="popup-box">
+        <div class="check-wrapper">
+            <i class="fas fa-check"></i>
+        </div>
+        <p>Berhasil!</p>
+    </div>
+</div>
+
+
+<script src="assets/script.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.getElementById("chatbotBtn");
+        const popup = document.getElementById("chatbotPopup");
+        const closeBtn = document.getElementById("chatbotClose");
+        const input = document.getElementById("chatbotInput");
+        const body = document.getElementById("chatbotBody");
+        const sendBtn = document.getElementById("chatbotSend");
+        const buttons = document.querySelectorAll(".btn-jenis");
+        const fileInput = document.getElementById("fileInput");
+        const mainPreview = document.getElementById("mainPreview");
+        const thumbContainer = document.getElementById("thumbContainer");
+    
+        // 🔥 Ambil elemen berat & koin di sini (di dalam DOMContentLoaded)
+        const beratInput = document.querySelector("input[placeholder^='Example']");
+        const koinInput  = document.querySelector("input[value$='Koin']");
+        koinInput.setAttribute("readonly", true);
+        buttons[0].classList.add("active");
+
+        buttons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                // Hilangkan active dari semua tombol
+                buttons.forEach(b => b.classList.remove("active"));
+                // Tambahkan active pada tombol yang diklik
+                btn.classList.add("active");
+            });
+        });
+        let selectedImages = [];
+
+        if (!btn || !popup || !closeBtn) {
+            console.warn("Chatbot tidak aktif di halaman ini.");
+        } else {
+            // Toggle popup
+            btn.addEventListener("click", () => popup.classList.add("show"));
+            closeBtn.addEventListener("click", () => popup.classList.remove("show"));
+
+            // Kirim pesan
+            function sendMessage() {
+                const text = input.value.trim();
+                if (!text) return;
+
+                let userBubble = document.createElement("div");
+                userBubble.className = "user-msg";
+                userBubble.textContent = text;
+                body.appendChild(userBubble);
+
+                input.value = "";
+
+                setTimeout(() => {
+                    let botBubble = document.createElement("div");
+                    botBubble.className = "bot-msg";
+                    botBubble.textContent = "Terima kasih! Saya sedang memproses pertanyaan Anda.";
+                    body.appendChild(botBubble);
+
+                    body.scrollTop = body.scrollHeight;
+                }, 600);
+
+                body.scrollTop = body.scrollHeight;
+            }
+
+            sendBtn.addEventListener("click", sendMessage);
+            input.addEventListener("keypress", (e) => { if (e.key === "Enter") sendMessage(); });
+        }
+
+        fileInput.addEventListener("change", function (e) {
+            let files = Array.from(e.target.files);
+
+            // 🔥 Batasi maksimal 4 file
+            if (files.length > 4) {
+                alert("Maksimal upload adalah 4 foto.");
+                files = files.slice(0, 4); // hanya ambil 4 foto pertama
+            }
+
+            selectedImages = [];
+            thumbContainer.innerHTML = "";
+            mainPreview.innerHTML = "";
+
+            files.forEach((file, index) => {
+                const reader = new FileReader();
+                reader.onload = function (event) {
+                    const imgURL = event.target.result;
+                    selectedImages.push(imgURL);
+
+                    let thumb = document.createElement("img");
+                    thumb.src = imgURL;
+                    thumb.className = "thumb-item";
+
+                    thumb.addEventListener("click", () => {
+                        mainPreview.style.backgroundImage = `url('${imgURL}')`;
+                    });
+
+                    thumbContainer.appendChild(thumb);
+
+                    // gambar pertama ditampilkan sebagai preview utama
+                    if (index === 0) {
+                        mainPreview.style.backgroundImage = `url('${imgURL}')`;
+                    }
+                };
+                reader.readAsDataURL(file);
+            });
+        });
+
+        // ============= JENIS SAMPAH BUTTON =============
+        buttons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                buttons.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+            });
+        });
+    
+        // ============= HITUNG KOIN OTOMATIS =============
+        beratInput.addEventListener("input", function () {
+            let value = beratInput.value.replace(/[^\d.,]/g, "").replace(",", ".");
+    
+            if (value === "") {
+                koinInput.value = "0 Koin";
+                return;
+            }
+    
+            let kg = parseFloat(value);
+            let koin = kg * 20;
+    
+            koinInput.value = `${koin} Koin`;
+        });
+
+        // ============= SIMPAN DATA + POPUP =============
+        document.querySelector(".btn-simpan").addEventListener("click", () => {
+
+        const berat = beratInput.value;
+        const tgl = document.querySelector("input[type='date']").value;
+        const koin = koinInput.value;
+
+        const selectedJenis = document.querySelector(".btn-jenis.active")
+            ? document.querySelector(".btn-jenis.active").innerText
+            : "Belum dipilih";
+
+        if (!berat || !tgl || selectedImages.length === 0) {
+            alert("Harap isi semua data dan upload gambar.");
+            return;
+        }
+
+        const dummyData = {
+            jenis: selectedJenis,
+            berat: berat,
+            tanggal: tgl,
+            koin: koin,
+            gambar: selectedImages,
+            waktuSimpan: new Date().toLocaleString()
+        };
+
+        let database = JSON.parse(localStorage.getItem("rewasteData")) || [];
+        database.push(dummyData);
+        localStorage.setItem("rewasteData", JSON.stringify(database));
+
+        // Tampilkan popup sukses
+        const popup = document.getElementById("popupSuccess");
+        popup.classList.add("show");
+
+        // Redirect setelah 3 detik
+        setTimeout(() => {
+            window.location.href = "bank2.html";
+        }, 3000);
+        });
+    });
+</script>    
+</body>
+</html>

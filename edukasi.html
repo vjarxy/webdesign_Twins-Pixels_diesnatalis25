@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReWaste - Beranda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="rw-navbar">
+    <div class="rw-nav-container">
+        <div class="rw-logo">
+            <img src="assets/img/logo.png" alt="Logo ReWaste">
+            <span>ewaste</span>
+        </div>
+
+        <nav class="rw-nav-menu" id="rwNavMenu">
+            <a href="beranda.html">Beranda</a>
+            <a href="edukasi.html" class="active">Edukasi</a>
+            <a href="bank.html">Bank Sampah</a>
+            <a href="galeri.html">Galeri</a>
+            <a href="kontak.html">Kontak</a>
+            <a href="login.html"><button class="rw-login-btn">Login</button></a>
+        </nav>
+
+        <div class="rw-nav-toggle" id="rwNavToggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+</header>
+
+<!-- ===================== HERO EDUKASI SECTION ===================== -->
+<section class="edu-hero">
+    <div class="edu-hero-bg"></div>
+
+    <div class="edu-hero-content">
+        <h1>Pusat Edukasi Sampah</h1>
+        <p>Pelajari cara mengelola sampah dengan benar untuk masa depan yang lebih bersih dan berkelanjutan</p>
+
+        <button class="edu-btn-primary">Mulai Belajar</button>
+
+        <!-- Statistik -->
+        <div class="edu-stat-wrapper">
+            <div class="edu-stat-card">
+                <h3>175 juta ton</h3>
+                <p>Sampah di Indonesia per tahun</p>
+            </div>
+            <div class="edu-stat-card">
+                <h3>67%</h3>
+                <p>Sampah organik yang bisa dikompos</p>
+            </div>
+            <div class="edu-stat-card">
+                <h3>18%</h3>
+                <p>Sampah plastik yang dapat didaur ulang</p>
+            </div>
+            <div class="edu-stat-card">
+                <h3>0,7 Kg</h3>
+                <p>Sampah per orang per hari</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== DAMPAK SECTION ===================== -->
+<section class="edu-dampak">
+    <h2>Dampak Bagi Bumi dan Kita</h2>
+    <p class="edu-subtext">Sampah yang tidak dikelola dengan baik memberikan dampak negatif yang serius bagi lingkungan dan kesehatan kita</p>
+
+    <div class="edu-impact-grid">
+        <div class="edu-impact-card">
+            <div class="edu-impact-head">
+                <div class="edu-impact-icon">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <h4>Kesehatan Terganggu</h4>
+            </div>
+            <p>Sampah menumpuk menjadi sarang penyakit dan mengganggu kesehatan masyarakat.</p>
+        </div>
+
+        <div class="edu-impact-card">
+            <div class="edu-impact-head">
+                <div class="edu-impact-icon">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <h4>Kesehatan Terganggu</h4>
+            </div>
+            <p>Sampah menumpuk menjadi sarang penyakit dan mengganggu kesehatan masyarakat.</p>
+        </div>
+
+        <div class="edu-impact-card">
+            <div class="edu-impact-head">
+                <div class="edu-impact-icon">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <h4>Kesehatan Terganggu</h4>
+            </div>
+            <p>Sampah menumpuk menjadi sarang penyakit dan mengganggu kesehatan masyarakat.</p>
+        </div>
+        
+    </div>
+</section>
+
+<!-- ===================== ARTIKEL SECTION ===================== -->
+<section class="edu-artikel">
+    <div class="edu-artikel-header">
+        <div class="edu-artikel-header-left">
+            <h2>Artikel Edukasi Terbaru</h2>
+            <p class="edu-subtext">Baca artikel menarik seputar pengelolaan sampah dan lingkungan</p>
+        </div>
+
+        <div class="edu-artikel-nav-btns">
+            <button id="prevArticle"><i class="fa-solid fa-chevron-left"></i></button>
+            <button id="nextArticle"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <div class="edu-article-card">
+        <img id="artikelImg" src="assets/img/artikel.png" alt="Artikel Pengelolaan Sampah">
+    
+        <div class="edu-article-content">
+            <span class="edu-article-date" id="artikelDate">
+                <i class="fa-regular fa-calendar"></i> 20 Nov 2025 &nbsp; &nbsp; 
+                <i class="fa-regular fa-clock"></i> 5 menit
+            </span>
+            <h3 id="artikelTitle">Panduan Lengkap Memilah Sampah di Rumah</h3>
+            <p id="artikelDesc">Cara mudah mengelompokkan sampah organik dan anorganik agar pengelolaan lebih efektif.</p>
+            <button class="rw-btn-secondary" id="artikelBtn">Baca Selengkapnya</button>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== CARA KELOLA SECTION ===================== -->
+<section class="edu-cara">
+    <h2>Cara Mengelola Sampah dengan Benar</h2>
+
+    <div class="edu-manage-grid">
+
+        <div class="edu-manage-card">
+            <img src="assets/img/cara1.png" alt="Pemilahan Sampah">
+            <h4>Pemilahan Sampah</h4>
+            <p>Memisahkan sampah organik, plastik, kertas, dan lainnya sebelum dibuang.</p>
+
+            <ul>
+                <li><span class="edu-li-bullet">1</span> Organik</li>
+                <li><span class="edu-li-bullet">2</span> Anorganik</li>
+                <li><span class="edu-li-bullet">3</span> B3</li>
+                <li><span class="edu-li-bullet">4</span> Kertas</li>
+            </ul>
+
+            <button class="edu-cara-btn-primary">Pelajari Lebih Lanjut</button>
+        </div>
+
+        <div class="edu-manage-card">
+            <img src="assets/img/cara2.png" alt="Daur Ulang Kreatif">
+            <h4>Daur Ulang Kreatif</h4>
+            <p>Mengubah sampah menjadi produk baru yang memiliki nilai guna.</p>
+
+            <ul>
+                <li><span class="edu-li-bullet">1</span> Organik</li>
+                <li><span class="edu-li-bullet">2</span> Anorganik</li>
+                <li><span class="edu-li-bullet">3</span> B3</li>
+                <li><span class="edu-li-bullet">4</span> Kertas</li>
+            </ul>
+
+            <button class="edu-cara-btn-primary">Pelajari Lebih Lanjut</button>
+        </div>
+
+        <div class="edu-manage-card">
+            <img src="assets/img/cara3.png" alt="Bank Sampah">
+            <h4>Bank Sampah</h4>
+            <p>Setor sampah yang bisa didaur ulang dan dapatkan saldo e-wallet.</p>
+
+            <ul>
+                <li><span class="edu-li-bullet">1</span> Organik</li>
+                <li><span class="edu-li-bullet">2</span> Anorganik</li>
+                <li><span class="edu-li-bullet">3</span> B3</li>
+                <li><span class="edu-li-bullet">4</span> Kertas</li>
+            </ul>
+
+            <button class="edu-cara-btn-primary">Pelajari Lebih Lanjut</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===================== QUIZ INTERAKTIF ===================== -->
+<section class="edu-quiz">
+    <h2>Quiz Interaktif</h2>
+
+    <!-- Halaman Intro -->
+    <div id="quizIntro" class="quiz-intro">
+        <p><strong>Quiz Pengetahuan Sampah</strong></p>
+        <p>Uji seberapa banyak kamu tahu tentang pengelolaan sampah.</p>
+        <p>Quiz ini terdiri dari 5 pertanyaan tentang sampah dan lingkungan. Siap untuk menguji pengetahuanmu?</p>
+        <button id="startQuizBtn" class="rw-btn-primary">Mulai Quiz</button>
+    </div>
+
+    <!-- Halaman Quiz -->
+    <div id="quizCard" class="quiz-card" style="display:none;">
+
+        <div class="quiz-top">
+            <span class="quiz-number">Pertanyaan <span id="qNum">1</span> dari 5</span>
+            <span class="quiz-progress-text"><span id="qProgress">0</span>% Selesai</span>
+        </div>
+
+        <h3 id="quizQuestion">Pertanyaan muncul di sini</h3>
+
+        <div id="quizOptions" class="quiz-options"></div>
+
+        <div class="quiz-nav">
+            <button id="quizPrev" class="quiz-btn">Prev</button>
+            <button id="quizNext" class="quiz-btn">Next</button>
+        </div>
+
+        <div class="quiz-progress-bar">
+            <div id="quizProgressBar"></div>
+        </div>
+    </div>
+</section>
+
+<div id="quizScoreModal" class="quiz-score-modal" style="display:none;">
+    <div class="quiz-score-content">
+        <h3>Quiz Selesai!</h3>
+        <div class="checkmark-container">
+            <i class="fa-solid fa-circle-check checkmark"></i>
+        </div>
+        <p>Skor Anda: <span id="finalScore">0</span> / 100</p>
+        <button id="closeScoreModal" class="quiz-btn">Tutup</button>
+    </div>
+</div>
+
+
+<!-- ===================== CTA SECTION ===================== -->
+<section class="rw-cta">
+    <div class="rw-cta-box">
+        <div class="rw-cta-corner top-right"></div>
+        <div class="rw-cta-corner bottom-left"></div>
+
+        <h3>Mulai Kelola Sampah</h3>
+        <p>Dengan pengetahuan yang tepat, kita semua bisa berkontribusi untuk lingkungan yang lebih bersih.</p>
+
+        <a href="bank.html"><button class="rw-cta-btn">Kelola Sampah
+            <i class="fa-solid fa-paper-plane"></i>
+        </button></a>
+    </div>
+</section>
+
+<!-- ===================== FLOATING CHATBOT BUTTON ===================== -->
+<div class="rw-chatbot-btn" id="chatbotBtn">
+    <i class="fa-solid fa-comments"></i>
+</div>
+
+<div class="rw-chatbot-popup" id="chatbotPopup">
+    <div class="rw-chatbot-header">
+        <span>Rewaste Chatbot</span>
+        <i class="fa-solid fa-xmark" id="chatbotClose"></i>
+    </div>
+
+    <div class="rw-chatbot-body" id="chatbotBody">
+        <div class="bot-msg">
+            Halo! Ada yang bisa saya bantu? 😊
+        </div>
+    </div>
+
+    <div class="rw-chatbot-input">
+        <input type="text" id="chatbotInput" placeholder="Ketik pesan...">
+        <button id="chatbotSend"><i class="fa-solid fa-paper-plane"></i></button>
+    </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="rw-footer">
+    <div class="rw-footer-container">
+
+        <!-- LEFT: Logo + Description -->
+        <div class="rw-footer-brand">
+            <div class="rw-footer-logo">
+                <img src="assets/img/logo.png" alt="Logo">
+                <span>ewaste</span>
+            </div>
+            <p>
+                Platform edukasi sampah dan bank sampah digital untuk membantu siapa saja belajar, beraksi, dan memberi dampak nyata bagi lingkungan.
+            </p>
+
+            <div class="rw-footer-socials">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <!-- MIDDLE: Navigation -->
+        <div class="rw-footer-links">
+            <h4>Navigasi</h4>
+            <a href="#">Beranda</a>
+            <a href="#">Edukasi</a>
+            <a href="#">Bank Sampah</a>
+            <a href="#">Galeri</a>
+            <a href="#">Kontak</a>
+        </div>
+
+        <!-- RIGHT: Help -->
+        <div class="rw-footer-links">
+            <h4>Bantuan</h4>
+            <a href="#">Cara Kerja</a>
+            <a href="#">FAQ</a>
+            <a href="#">Pusat Bantuan</a>
+            <a href="#">Hubungi Kami</a>
+        </div>
+
+        <!-- RIGHT MOST – Newsletter -->
+        <div class="rw-footer-news">
+            <h4>Dapatkan Informasi</h4>
+
+            <div class="rw-footer-input-box">
+                <input type="text" placeholder="Email Anda...">
+                <button><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <br><hr class="hr">
+
+    <div class="rw-footer-bottom">
+        <p>Copyright © 2025 <span>Rewaste.</span> All rights reserved.</p>
+    </div>
+    
+    <div class="rw-footer-corner top-right"></div>
+    <div class="rw-footer-corner bottom-left"></div>
+    <div class="rw-footer-half-circle top-center"></div>
+</footer>
+
+<script src="assets/script.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const toggle = document.querySelector(".rw-nav-toggle");
+        const menu = document.querySelector(".rw-nav-menu");
+        const btn = document.getElementById("chatbotBtn");
+        const popup = document.getElementById("chatbotPopup");
+        const closeBtn = document.getElementById("chatbotClose");
+        const input = document.getElementById("chatbotInput");
+        const body = document.getElementById("chatbotBody");
+        const sendBtn = document.getElementById("chatbotSend");
+        const startBtn = document.getElementById("startQuizBtn");
+        const quizIntro = document.getElementById("quizIntro");
+        const quizCard = document.getElementById("quizCard");
+        const qNum = document.getElementById("qNum");
+        const qProgress = document.getElementById("qProgress");
+        const quizQuestion = document.getElementById("quizQuestion");
+        const quizOptions = document.getElementById("quizOptions");
+        const quizPrev = document.getElementById("quizPrev");
+        const quizNext = document.getElementById("quizNext");
+        const quizProgressBar = document.getElementById("quizProgressBar");
+        const quizScoreModal = document.getElementById("quizScoreModal");
+        const finalScore = document.getElementById("finalScore");
+        const closeScoreModal = document.getElementById("closeScoreModal");
+
+        const articles = [
+    {
+        img: "assets/img/artikel.png",
+        date: "20 Nov 2025",
+        time: "5 menit",
+        title: "Panduan Lengkap Memilah Sampah di Rumah",
+        desc: "Cara mudah mengelompokkan sampah organik dan anorganik agar pengelolaan lebih efektif.",
+        link: "#"
+    },
+    {
+        img: "assets/img/artikel.png",
+        date: "18 Nov 2025",
+        time: "7 menit",
+        title: "5 Tips Mengurangi Sampah Plastik di Rumah",
+        desc: "Langkah praktis untuk meminimalisir penggunaan plastik di kehidupan sehari-hari.",
+        link: "#"
+    },
+    {
+        img: "assets/img/artikel.png",
+        date: "15 Nov 2025",
+        time: "6 menit",
+        title: "Komposting Organik: Panduan Lengkap",
+        desc: "Pelajari cara membuat kompos dari sisa makanan dan sampah organik rumah tangga.",
+        link: "#"
+    }
+];
+
+let currentIndex = 0;
+
+function showArticle(index) {
+    const article = articles[index];
+    document.getElementById("artikelImg").src = article.img;
+    document.getElementById("artikelDate").innerHTML = `<i class="fa-regular fa-calendar"></i> ${article.date} &nbsp; &nbsp; <i class="fa-regular fa-clock"></i> ${article.time}`;
+    document.getElementById("artikelTitle").textContent = article.title;
+    document.getElementById("artikelDesc").textContent = article.desc;
+    document.getElementById("artikelBtn").onclick = () => { window.location.href = article.link; };
+}
+
+// Event tombol
+document.getElementById("prevArticle").addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + articles.length) % articles.length;
+    showArticle(currentIndex);
+});
+document.getElementById("nextArticle").addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % articles.length;
+    showArticle(currentIndex);
+});
+
+// Tampilkan artikel pertama
+showArticle(currentIndex);
+
+        toggle.addEventListener("click", () => {
+            menu.classList.toggle("show");
+        });
+        
+        // Data pertanyaan
+        const questions = [
+            {
+                question: "Berapa lama waktu yang dibutuhkan botol plastik untuk terurai?",
+                options: ["100 tahun", "50 tahun", "10 tahun", "5 tahun"],
+                answer: 0
+            },
+            {
+                question: "Jenis sampah apa yang bisa dikompos?",
+                options: ["Plastik", "Kertas", "Organik", "B3"],
+                answer: 2
+            },
+            {
+                question: "Apa singkatan dari B3?",
+                options: ["Bahan Berbahaya dan Beracun", "Bahan Biodegradable", "Besi, Batu, Baja", "Bahan Bekas"],
+                answer: 0
+            },
+            {
+                question: "Sampah plastik sebaiknya dibuang kemana?",
+                options: ["Dibuang sembarangan", "Daur ulang", "Dibakar", "Dicampur organik"],
+                answer: 1
+            },
+            {
+                question: "Apa manfaat bank sampah?",
+                options: ["Menghasilkan uang", "Mengurangi sampah lingkungan", "Mendidik masyarakat", "Semua benar"],
+                answer: 3
+            }
+        ];
+
+        let currentQuestion = 0;
+        let answers = [];
+
+        // Mulai Quiz
+        startBtn.addEventListener("click", () => {
+            quizIntro.style.display = "none";
+            quizCard.style.display = "block";
+            showQuestion();
+        });
+
+        // Tampilkan pertanyaan
+        function showQuestion() {
+            const q = questions[currentQuestion];
+            qNum.textContent = currentQuestion + 1;
+            qProgress.textContent = Math.round(((currentQuestion+1)/questions.length)*100);
+            quizQuestion.textContent = q.question;
+
+            quizOptions.innerHTML = "";
+            q.options.forEach((opt, index) => {
+                const btn = document.createElement("button");
+                btn.className = "quiz-option"; // ganti dari "quiz-btn" menjadi "quiz-option"
+                btn.textContent = opt;
+                btn.addEventListener("click", () => {
+                    answers[currentQuestion] = index;
+                    // Highlight pilihan
+                    Array.from(quizOptions.children).forEach(b => b.classList.remove("selected"));
+                    btn.classList.add("selected");
+                });
+                if (answers[currentQuestion] === index) btn.classList.add("selected");
+                quizOptions.appendChild(btn);
+            });
+
+            // Progress bar
+            quizProgressBar.style.width = ((currentQuestion+1)/questions.length*100) + "%";
+
+            // Tombol prev/next
+            quizPrev.disabled = currentQuestion === 0;
+            quizNext.textContent = currentQuestion === questions.length -1 ? "Selesai" : "Next";
+        }
+
+        // Navigasi Prev/Next
+        quizPrev.addEventListener("click", () => {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                showQuestion();
+            }
+        });
+
+        quizNext.addEventListener("click", () => {
+            if (currentQuestion < questions.length - 1) {
+                currentQuestion++;
+                showQuestion();
+            } else {
+                // Hitung skor
+                let score = 0;
+                answers.forEach((ans, index) => {
+                    if (ans === questions[index].answer) score += 20;
+                });
+
+                // Tampilkan modal
+                finalScore.textContent = score;
+                quizScoreModal.style.display = "flex";
+            }
+        });
+
+        closeScoreModal.addEventListener("click", () => {
+            quizScoreModal.style.display = "none";
+            // Reset quiz
+            currentQuestion = 0;
+            answers = [];
+            quizCard.style.display = "none";
+            quizIntro.style.display = "block";
+        });
+
+        if (!btn || !popup || !closeBtn) {
+            console.warn("Chatbot tidak aktif di halaman ini.");
+        } else {
+            // Toggle popup
+            btn.addEventListener("click", () => popup.classList.add("show"));
+            closeBtn.addEventListener("click", () => popup.classList.remove("show"));
+
+            // Kirim pesan
+            function sendMessage() {
+                const text = input.value.trim();
+                if (!text) return;
+
+                let userBubble = document.createElement("div");
+                userBubble.className = "user-msg";
+                userBubble.textContent = text;
+                body.appendChild(userBubble);
+
+                input.value = "";
+
+                setTimeout(() => {
+                    let botBubble = document.createElement("div");
+                    botBubble.className = "bot-msg";
+                    botBubble.textContent = "Terima kasih! Saya sedang memproses pertanyaan Anda.";
+                    body.appendChild(botBubble);
+
+                    body.scrollTop = body.scrollHeight;
+                }, 600);
+
+                body.scrollTop = body.scrollHeight;
+            }
+
+            sendBtn.addEventListener("click", sendMessage);
+            input.addEventListener("keypress", (e) => { if (e.key === "Enter") sendMessage(); });
+        }
+    });
+</script>
+</body>
+</html>

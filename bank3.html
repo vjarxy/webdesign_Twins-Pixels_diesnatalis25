@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReWaste - Beranda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="rw-navbar">
+    <div class="rw-nav-toggle">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="rw-nav-container">
+        <div class="rw-logo">
+            <img src="assets/img/logo.png" alt="Logo ReWaste">
+            <span>ewaste</span>
+        </div>
+
+        <nav class="rw-nav-menu" id="rwNavMenu">
+            <a href="beranda.html">Beranda</a>
+            <a href="edukasi.html">Edukasi</a>
+            <a href="bank.html" class="active">Bank Sampah</a>
+            <a href="galeri.html">Galeri</a>
+            <a href="kontak.html">Kontak</a>
+            <a href="login.html"><button class="rw-login-btn">Login</button></a>
+        </nav>
+
+        <div class="rw-nav-toggle" id="rwNavToggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+</header>
+
+<!-- ===================== HERO BANK STEP ===================== -->
+<section class="bank-hero">
+    <div class="bank-hero-overlay"></div>
+
+    <div class="bank-hero-content">
+        <h1>Ayo, Tukarkan Sampahmu!</h1>
+        <p>Jadikan Lingkungan Lebih Bersih dengan Cara Upload Fotonya, Masukkan Berat, 
+        Langsung Dapat Koin yang Bisa Ditukar ke Saldo E-Wallet. Praktis, Cepat, Aman.</p>
+    </div>
+</section>
+
+<!-- ===================== JENIS SAMPAH BOX ===================== -->
+<section class="jenis-sampah-wrapper">
+    <div class="jenis-sampah-box">
+        <h3 class="jenis-title">Pilih Jenis Sampah</h3>
+
+        <div class="jenis-option">
+            <button class="btn-jenis">Organik</button>
+            <button class="btn-jenis">Anorganik</button>
+            <button class="btn-jenis">B3</button>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== FORM TUKARKAN SAMPAH SESUAI GAMBAR ===================== -->
+<section class="tukar-section">
+
+    <h2 class="tukar-title">Tukarkan Sampahmu</h2>
+
+    <!-- ========== STEP INDICATOR BARU ========== -->
+    <div class="steps-container">
+
+        <div class="step-item active">
+            <div class="step-icon">
+                <div class="step-number">1</div>
+                <div class="step-box"></div>
+            </div>
+    
+            <div class="step-right">
+                <div class="step-line"></div>
+                <p class="step-text">Detail Penukaran</p>
+            </div>
+        </div>
+    
+        <div class="step-item">
+            <div class="step-icon">
+                <div class="step-number">2</div>
+                <div class="step-box"></div>
+            </div>
+    
+            <div class="step-right">
+                <div class="step-line"></div>
+                <p class="step-text">Lokasi Penukaran</p>
+            </div>
+        </div>
+
+        <div class="step-item">
+            <div class="step-icon">
+                <div class="step-number">3</div>
+                <div class="step-box"></div>
+            </div>
+    
+            <div class="step-right">
+                <div class="step-line"></div>
+                <p class="step-text">Konfirmasi Penukaran</p>
+            </div>
+        </div>
+    
+    </div>
+</section>
+
+<!-- ===================== KONFIRMASI PENUKARAN (BERDASARKAN GAMBAR) ===================== -->
+<section class="confirm-section">
+    <div class="confirm-box">
+        <div class="confirm-decor-circle-1"></div>
+        <div class="confirm-decor-circle"></div>
+        <!-- HEADER HIJAU -->
+        <div class="confirm-header">
+            <div class="confirm-icon"><i class="fas fa-check"></i></div>
+            <p>Penukaran Sampah Berhasil Dilakukan!</p>
+        </div>
+        <!-- GRID 2 KOLOM -->
+        <div class="confirm-grid">
+
+            <div class="confirm-item">
+                <p class="confirm-label">Berat Sampah</p>
+                <p class="confirm-value">10 Kg</p>
+            </div>
+
+            <div class="confirm-item">
+                <p class="confirm-label">Lokasi Awal</p>
+                <p class="confirm-value">Jl. Soekarno Hatta No. 17</p>
+            </div>
+
+            <div class="confirm-item">
+                <p class="confirm-label">Tanggal Penukaran</p>
+                <p class="confirm-value">11/26/2025</p>
+            </div>
+
+            <div class="confirm-item">
+                <p class="confirm-label">Pusat Lokasi yang Ingin Diantar</p>
+                <p class="confirm-value">Sidoarjo Kota</p>
+            </div>
+
+            <div class="confirm-item">
+                <p class="confirm-label">Koin yang Didapat</p>
+                <p class="confirm-value">100 Koin</p>
+            </div>
+
+            <div class="confirm-btn-wrapper">
+                <button class="confirm-btn" id="konfirmasiBtn">Konfirmasi Penukaran</button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===================== FLOATING CHATBOT BUTTON ===================== -->
+<div class="rw-chatbot-btn" id="chatbotBtn">
+    <i class="fa-solid fa-comments"></i>
+</div>
+
+<div class="rw-chatbot-popup" id="chatbotPopup">
+    <div class="rw-chatbot-header">
+        <span>Rewaste Chatbot</span>
+        <i class="fa-solid fa-xmark" id="chatbotClose"></i>
+    </div>
+
+    <div class="rw-chatbot-body" id="chatbotBody">
+        <div class="bot-msg">
+            Halo! Ada yang bisa saya bantu? 😊
+        </div>
+    </div>
+
+    <div class="rw-chatbot-input">
+        <input type="text" id="chatbotInput" placeholder="Ketik pesan...">
+        <button id="chatbotSend"><i class="fa-solid fa-paper-plane"></i></button>
+    </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="rw-footer">
+    <div class="rw-footer-container">
+
+        <!-- LEFT: Logo + Description -->
+        <div class="rw-footer-brand">
+            <div class="rw-footer-logo">
+                <img src="assets/img/logo.png" alt="Logo">
+                <span>ewaste</span>
+            </div>
+            <p>
+                Platform edukasi sampah dan bank sampah digital untuk membantu siapa saja belajar, beraksi, dan memberi dampak nyata bagi lingkungan.
+            </p>
+
+            <div class="rw-footer-socials">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <!-- MIDDLE: Navigation -->
+        <div class="rw-footer-links">
+            <h4>Navigasi</h4>
+            <a href="#">Beranda</a>
+            <a href="#">Edukasi</a>
+            <a href="#">Bank Sampah</a>
+            <a href="#">Galeri</a>
+            <a href="#">Kontak</a>
+        </div>
+
+        <!-- RIGHT: Help -->
+        <div class="rw-footer-links">
+            <h4>Bantuan</h4>
+            <a href="#">Cara Kerja</a>
+            <a href="#">FAQ</a>
+            <a href="#">Pusat Bantuan</a>
+            <a href="#">Hubungi Kami</a>
+        </div>
+
+        <!-- RIGHT MOST – Newsletter -->
+        <div class="rw-footer-news">
+            <h4>Dapatkan Informasi</h4>
+
+            <div class="rw-footer-input-box">
+                <input type="text" placeholder="Email Anda...">
+                <button><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <br><hr class="hr">
+
+    <div class="rw-footer-bottom">
+        <p>Copyright © 2025 <span>Rewaste.</span> All rights reserved.</p>
+    </div>
+    
+    <div class="rw-footer-corner top-right"></div>
+    <div class="rw-footer-corner bottom-left"></div>
+    <div class="rw-footer-half-circle top-center"></div>
+</footer>
+
+<div class="popup-success" id="popupSuccess">
+    <div class="popup-box">
+        <div class="check-wrapper">
+            <i class="fas fa-check"></i>
+        </div>
+        <p>Berhasil!</p>
+    </div>
+</div>
+
+<script src="assets/script.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.getElementById("chatbotBtn");
+        const popup = document.getElementById("chatbotPopup");
+        const closeBtn = document.getElementById("chatbotClose");
+        const input = document.getElementById("chatbotInput");
+        const body = document.getElementById("chatbotBody");
+        const sendBtn = document.getElementById("chatbotSend");
+        const buttons = document.querySelectorAll(".btn-jenis");
+        const konfirmasiButton = document.getElementById("konfirmasiBtn");
+        const popupsuccess = document.getElementById("popupSuccess");
+
+        buttons[0].classList.add("active");
+        buttons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                // Hilangkan active dari semua tombol
+                buttons.forEach(b => b.classList.remove("active"));
+                // Tambahkan active pada tombol yang diklik
+                btn.classList.add("active");
+            });
+        });
+
+        konfirmasiButton.addEventListener("click", function (event) {
+
+        event.preventDefault(); // cegah pindah halaman dulu
+
+        const jenis = document.querySelector(".btn-jenis.active")?.textContent || "";
+
+        // Tampilkan popup
+        popupsuccess.classList.add("show");
+
+        // Setelah animasi → pindah halaman
+        setTimeout(() => {
+            window.location.href = "beranda.html";
+        }, 3000);
+        });
+
+        if (!btn || !popup || !closeBtn) {
+            console.warn("Chatbot tidak aktif di halaman ini.");
+        } else {
+            // Toggle popup
+            btn.addEventListener("click", () => popup.classList.add("show"));
+            closeBtn.addEventListener("click", () => popup.classList.remove("show"));
+
+            // Kirim pesan
+            function sendMessage() {
+                const text = input.value.trim();
+                if (!text) return;
+
+                let userBubble = document.createElement("div");
+                userBubble.className = "user-msg";
+                userBubble.textContent = text;
+                body.appendChild(userBubble);
+
+                input.value = "";
+
+                setTimeout(() => {
+                    let botBubble = document.createElement("div");
+                    botBubble.className = "bot-msg";
+                    botBubble.textContent = "Terima kasih! Saya sedang memproses pertanyaan Anda.";
+                    body.appendChild(botBubble);
+
+                    body.scrollTop = body.scrollHeight;
+                }, 600);
+
+                body.scrollTop = body.scrollHeight;
+            }
+
+            sendBtn.addEventListener("click", sendMessage);
+            input.addEventListener("keypress", (e) => { if (e.key === "Enter") sendMessage(); });
+        }
+    });
+</script>
+
+<script>
+    const navToggle = document.querySelector('.rw-nav-toggle');
+    const navMenu = document.querySelector('.rw-nav-menu');
+    
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+    });
+    </script>
+    
+</body>
+</html>
